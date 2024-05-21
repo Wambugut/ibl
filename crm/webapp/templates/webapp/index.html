@@ -1,35 +1,29 @@
-{% extends 'webapp/base.html' %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <title>WAMBUGU AND SONS</title>
+</head>
 
 
 <body>
-<br>
-<br>
+    <div class="container">
+        <h1>WAMBUGU</h1>
+    <img src="{% static 'image/IMG-20240117-WA0019.jpg' %}" class="image" 
+    style="width: 180px; margin-bottom= -50px;" /> 
 
-<div class="text-center">
+    <div class="subscribe_box">
+    <form action="" method="emailadd">{% csrf_token %}
+        <div class="formbox">
+            <input type="text" name="eamail address" placeholder="enter email adress">
+            <button type="submit">subscribe</button>
 
-<h3>projectx...management at its best!</h3>
-
-<br>
-
-<h5>keep track of your records effectively!</h5>
-
-<hr>
-
-<br>
-
-<a class="btn btn=primary" type = "button" href="{% url '' %}"> create your account</a>
-
-
-
-
-</div>
-
-
-
-
-
+        </div>
+    </form>
+    </div>
+    </div>
 </body>
-
-{% endblock %}
+</html>
